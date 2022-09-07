@@ -1,48 +1,36 @@
 body{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    
+    height: 88vh;
+    gap: 10px;
+    flex-direction: column;
 }
 
-#buttons{
+h2{
+    font-size: 3em;
+}
+
+#inputs{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     gap: 20px;
 }
 
-#lowercount,#addcount,#reset{
-    padding: 10px 30px;
-    border: 3px solid black;
-    border-radius: 5px;
-    color: black;
-    font-weight: 700;
-    font-size: 2em;
-    transition: ease-in;
+input[type="color"]::-webkit-color-swatch {
+    border: 3px white solid;
+    border-radius: 40px;
+
 }
 
-#lowercount:hover{
-    background-color: coral;
-    
-}
-#addcount:hover{
-    background-color: coral;
-    transition: ease-in;
-}
-#reset:hover{
-    background-color: coral;
-    transition: ease-in;
-}
-
-h3{
-    font-size: 3em;
-    font-weight: bold;
-    margin: 0px;
-}
-
-h1{
-    font-size: 5em;
+input{
+    width: 80px;
+    height: 80px;
+    border-color: rgb(206, 200, 200);
+    color: rgb(112, 58, 58);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
