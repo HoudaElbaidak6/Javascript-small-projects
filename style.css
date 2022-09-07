@@ -13,14 +13,27 @@ body{
     gap: 20px;
 }
 
-#lowercount,#addcount{
+#lowercount,#addcount,#reset{
     padding: 10px 30px;
     border: 3px solid black;
     border-radius: 5px;
     color: black;
     font-weight: 700;
     font-size: 2em;
+    transition: ease-in;
+}
 
+#lowercount:hover{
+    background-color: coral;
+    
+}
+#addcount:hover{
+    background-color: coral;
+    transition: ease-in;
+}
+#reset:hover{
+    background-color: coral;
+    transition: ease-in;
 }
 
 h3{
