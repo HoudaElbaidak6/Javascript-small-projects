@@ -1,48 +1,50 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #e07a5f;
 }
 
-#buttons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+#bigsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f4f1de;
+  width: 50%;
+  height: 50%;
+  border-radius: 30px;
+  box-sizing: border-box;
 }
 
-#lowercount,#addcount,#reset{
-    padding: 10px 30px;
-    border: 3px solid black;
-    border-radius: 5px;
-    color: black;
-    font-weight: 700;
-    font-size: 2em;
-    transition: ease-in;
+#bigsection h1 {
+  font-size: 3em;
+  font-weight: 500;
+  color: #3d405b;
+  margin: 0px;
 }
 
-#lowercount:hover{
-    background-color: coral;
-    
-}
-#addcount:hover{
-    background-color: coral;
-    transition: ease-in;
-}
-#reset:hover{
-    background-color: coral;
-    transition: ease-in;
+#bigsection h2 {
+  font-size: 2.5em;
+  font-weight: 500;
+  color: #3d405b;
 }
 
-h3{
-    font-size: 3em;
-    font-weight: bold;
-    margin: 0px;
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-h1{
-    font-size: 5em;
+button {
+  padding: 10px 20px;
+  font-size: 1.5em;
+  font-weight: 500;
+  border: 5px solid #3d405b;
+  background-color: #f2cc8f;
+  color: #3d405b;
+  border-radius: 5px;
 }

@@ -1,38 +1,45 @@
-let output = document.getElementById("output");
-let buttonlow = document.getElementById("lowercount");
-let buttonhigh = document.getElementById("addcount");
-let resetbtn = document.getElementById("reset");
-let count = 0;
+let output=document.getElementById("output");
+let btnadd=document.getElementById("buttonadd");
+let btnreset=document.getElementById("btnreset");
+let btnlow=document.getElementById("btnlow");
 
-function addnumber() {
-  output.textContent = ++count;
-  changeColor();
+let count=0
+function addCount() {
+    output.textContent= ++count;
+    changecolorNumber();
 }
 
-function reset() {
-  count = 0;
-  output.textContent = 0;
-  changeColor();
+function resetCount() {
+    count=0;
+    output.textContent= 0;
+    changecolorNumber();
 }
 
-function lowernumber() {
-  output.textContent = --count;
-  changeColor();
+function lowCount() {
+    output.textContent= --count;
+    changecolorNumber();
 }
 
-function changeColor() {
-  if (output.textContent > 0) {
-    output.style.color = "red";
-  } else if (output.textContent == 0) {
-    output.style.color = "green";
-  } else {
-    output.style.color = "blue";
-  }
+function changecolorNumber() {
+    if (output.textContent>0) {
+        output.style.color = "#81b29a";
+    }
+    else if (output.textContent==0){
+        output.style.color ="#a98467";
+    }
+
+    else{
+        output.style.color ="#9e2a2b" ;
+    }
 }
 
-buttonhigh.addEventListener("click", addnumber);
-resetbtn.addEventListener("click", reset);
-buttonlow.addEventListener("click", lowernumber);
+btnadd.addEventListener("click",addCount)
+btnreset.addEventListener("click",resetCount)
+btnlow.addEventListener("click",lowCount)
+
+
+
+
 
 /* let output = document.getElementById("output");
 let buttons = document.querySelectorAll("button");
