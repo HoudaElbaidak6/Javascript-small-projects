@@ -1,18 +1,24 @@
+let outputext, input, btn;
+outputext = document.getElementById("outputext");
+input = document.getElementById("input");
+btn = document.getElementById("btn");
 
- let body=document.querySelector("body");
-let hexcolor=document.getElementById("hexcolor");
-let hexbtn=document.getElementById("hexbtn");
-let hextab=[0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
 
-function changehexColor(event) {
- let hex="#"
-   for (let i = 0; i < 6; i++) {
-    let randomNumber = Math.floor(Math.random() * hextab.length) ;
-    hex+=hextab[randomNumber];
-   }
-hexcolor.textContent=hex
-body.style.backgroundColor=hex
-   
+function displayName (event) {
+  let name = input.value;
+  if (name.length > 0) {
+    outputext.textContent += "  " + name;
+  }
+  input.value = "";
 }
 
-hexbtn.addEventListener("click",changehexColor)  
+
+btn.addEventListener("click", displayName);
+
+input.addEventListener("keypress",function (event) {
+    console.log(event);
+  if (event.key == "Enter" ) {
+    displayName(event)
+  }
+  
+}) 
