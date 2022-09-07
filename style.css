@@ -3,15 +3,32 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
 }
 
-#hexbtn{
-    background-color: grey;
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#lowercount,#addcount{
+    padding: 10px 30px;
+    border: 3px solid black;
+    border-radius: 5px;
     color: black;
-    border: solid 5px black;
-    border-radius: 10px;
-    font-size: 1.3em;
     font-weight: 700;
-    padding: 10px 20px;
+    font-size: 2em;
+
+}
+
+h3{
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0px;
+}
+
+h1{
+    font-size: 5em;
 }
