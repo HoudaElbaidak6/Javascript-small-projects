@@ -1,16 +1,14 @@
-
-let output=document.getElementById("output")
-let buttonlow=document.getElementById("lowercount")
-let buttonhigh=document.getElementById("addcount")
- let count =0
-
-function addnumber() {
-   output.textContent=count++;
+let body = document.querySelector("body");
+let hexcolor = document.getElementById("hexcolor");
+let hexbtn = document.getElementById("hexbtn");
+let hextab = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+function changehexColor(event) {
+  let hex = "#";
+  for (let i = 0; i < 6; i++) {
+    let randomNumber = Math.floor(Math.random() * hextab.length);
+    hex += hextab[randomNumber];
+  }
+  hexcolor.textContent = hex;
+  body.style.backgroundColor = hex;
 }
-
-function lowernumber() {
-    output.textContent=count--;
-}
-
-buttonhigh.addEventListener("click",addnumber )
-buttonlow.addEventListener("click",lowernumber )
+hexbtn.addEventListener("click", changehexColor);
