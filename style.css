@@ -1,7 +1,27 @@
 
 i {
     cursor: pointer;
+    font-size: 0.7em;
 }
 .show{
     display:none ;
+}
+
+h2{
+    background-color: brown;
+    margin: 0px;
+    text-align: start;
+    padding: 10px 20px;
+}
+
+p{
+    background-color: chocolate;
+    margin: 0px;
+    padding: 10px 20px;
+}
+
+.thing{
+   width: 70%;
+   margin: auto;
+   
 }
