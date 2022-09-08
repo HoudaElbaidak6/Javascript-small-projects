@@ -1,31 +1,31 @@
-let inputkg=document.getElementById("kilo");
-let inputcm=document.getElementById("heightcm");
-let button=document.querySelector("button");
-let output=document.querySelector("#output");
+let poid = document.getElementById("poid-input");
+let height = document.getElementById("longueur-input");
+let button = document.querySelector("button");
+let output = document.querySelector("h3");
 
-function BMI() {
-
-    
-    let res = (inputkg.value /(inputcm.value*inputcm)).toFixed(2);
-   console.log(res);
-    if (res<18.5) {
-        output.textContent = `${res} which means you are underweigth `;
-        console.log("underweigth");
-    }
-    else if (res>=18.5&&res<=25 ){
-        output.textContent = `${res} which means you are normal `;
-        console.log("normal");
-    }
-    else if (res>=25&&res<=30){
-        output.textContent = `${res} which means you are overweigh `;
-        console.log("overweigth");
-    }
-   
+function Calculate() {
+  let res = (poid.value / (height.value * height.value)).toPrecision(2);
+  console.log(res)
+  if (res < 18.5) {
+    output.textContent = ` Your BMI is ${res} which means you are underweight`;
+  } else if (res >= 18.5 && res <= 24.9) {
+    output.textContent = ` Your BMI is ${res} which means you are Normal`;
+  } else if (res >= 25 && res <= 29.9) {
+    output.textContent = ` Your BMI is ${res} which means you are Overweight`;
+  } else if (res >= 30 && res <= 34.9) {
+    output.textContent = ` Your BMI is ${res} which means you suffer from Obesity Class I`;
+  } else if (res >= 35 && res <= 39.9) {
+    output.textContent = ` Your BMI is ${res} which means you suffer from Obesity Class II`;
+  } else {
+    output.textContent = ` Your BMI is ${res} which means you are extremly Obese !!! `;
+  }
 }
 
-button.addEventListener("click",BMI)
+button.addEventListener("click",Calculate);
 
+/* output.addEventListener("keypress", function (event) {
+    if (event.key == "Enter" ) {
+       Calculate(event);
+    };
 
-
-
-
+  }); */

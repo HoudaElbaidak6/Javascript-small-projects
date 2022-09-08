@@ -1,7 +1,80 @@
+@font-face {
+  font-family: "satisfy";
+  src: url(fonts/Satisfy-Regular.ttf);
+}
+
+@font-face {
+  font-family: "barlow";
+  src: url(fonts/Barlow-Regular.ttf);
+}
+
 body {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  gap: 10px;
+
+  height: 80vh;
+  background-image: url(images/d10257dc09d5ee5354cc00bcce525d30.jpg);
+}
+
+h1 {
+  font-family: "satisfy";
+  margin: 30px 0px 0px 0px;
+}
+h4 {
+  margin: 0px;
+  font-size: 1.1em;
+  font-family: "barlow";
+}
+
+h3 {
+  margin: 0px;
+  font-family: "barlow";
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+
+  font-family: "barlow";
+}
+/* #98B8EF
+#CC9DED
+ */
+
+input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+input:active,
+input:hover {
+  outline: solid 2px #cc9ded;
+}
+#calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  /* background-color: ; */
+  padding: 80px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #cc9ded;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.3em;
+  font-weight: bold; 
+  font-family: "barlow";
+}
+i {
+    color: #a462d3;
 }
