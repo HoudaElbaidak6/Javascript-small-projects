@@ -1,27 +1,27 @@
 let input = document.querySelector("input");
 let button = document.querySelector("button");
+let body = document.querySelector("body");
 
-button.addEventListener("click", function () {
-  console.log(input.value);
-  let listItem = document.createElement("li");
-  listItem.textContent = input.value;
-  let ul = document.querySelector("ul");
-  ul.appendChild(listItem);
-  input.value = "";
-});
+let ul = document.createElement("ul");
+body.appendChild(ul);
 
-input.addEventListener("keypress", function (e) {
-  if (e.key == "Enter") {
-  if (input.value.length>0) {
+function Add() {
+  if (input.value.length > 0) {
     console.log(input.value);
     let listItem = document.createElement("li");
     listItem.textContent = input.value;
-    let ul = document.querySelector("ul");
+
     ul.appendChild(listItem);
     input.value = "";
+  } else {
+    alert("type something!");
   }
-  else{
-    alert("type something!")
-  }
+}
+
+button.addEventListener("click", Add);
+
+input.addEventListener("keypress", function (e) {
+  if (e.key == "Enter") {
+    Add();
   }
 });
