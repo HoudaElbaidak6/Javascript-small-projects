@@ -9,7 +9,7 @@ function Calculate() {
   if (res < 18.5) {
     output.textContent = ` Your BMI is ${res} which means you are underweight`;
   } else if (res >= 18.5 && res <= 24.9) {
-    output.textContent = ` Your BMI is ${res} which means you are Normal`;
+    output.textContent = ` Your BMI is ${res} which means your weight is  Normal`;
   } else if (res >= 25 && res <= 29.9) {
     output.textContent = ` Your BMI is ${res} which means you are Overweight`;
   } else if (res >= 30 && res <= 34.9) {
