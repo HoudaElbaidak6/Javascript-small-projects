@@ -1,33 +1,31 @@
-let myGuess, chance;
+let button = document.querySelector("button");
 
-chance = 3;
-let randomNumber = Math.floor(Math.random() * 10) + 1;
-console.log("the number was" + randomNumber);
+function guessNumber() {
+  let yourGuess = document.querySelector("input").value;
+  let output = document.getElementById("results").value;
+  let numberReveal = document.getElementById("numberReveal").value;
 
-while (chance > 0) {
-  do {
-   myGuess = Number(prompt("Enter a number btw 1 and 10 "));
-  } while (myGuess < 1 || myGuess > 10);
+  let randomNumber = Math.floor(Math.random() * 10) + 1;
+  console.log("the number was" + randomNumber);
 
-  if (myGuess > randomNumber) {
-    alert(`${myGuess} is high ,try a lower number`);
-    console.log(`${myGuess} is high ,try a lower number`);
-    chance--;
-  } else if (myGuess == randomNumber) {
-    alert(" You got it Right !!!");
-    console.log(" You got it Right !!!");
-    // alert("You found it from " + (chance) + " essays")
-    // console.log("You found it from " + (chance) + " essays");
-    chance = 0;
-  } else {
-    alert(`${myGuess} is low ,try a higher number`);
-    console.log(`${myGuess} is low ,try a higher number`);
-    chance--;
+  for (let i = 0; i < 3; i++) {
+    if (yourGuess == randomNumber) {
+      output.textContent = "Your got it right  ";
+
+      console.log("Damn girl !! You got it Right !!!");
+      console.log("You found it from " + (i + 1) + " essays");
+      break;
+    } else if (yourGuess > randomNumber) {
+      output.textContent = ` ${yourGuess} is high ,try a lower number`;
+      console.log(`${yourGuess} is high ,try a lower number`);
+    } else {
+      output.textContent = `${yourGuess} is low ,try a higher number`;
+      console.log(`${yourGuess} is low ,try a higher number`);
+    }
   }
-  
-} 
-console.log("the number was" + randomNumber);
-alert("the number was" + randomNumber)
 
+  numberReveal.textContent = `The number was ${randomNumber} `;
+  console.log("the number was" + randomNumber);
+}
 
-
+button.addEventListener("click", guessNumber);
