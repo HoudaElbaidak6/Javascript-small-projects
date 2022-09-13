@@ -1,4 +1,4 @@
-const text = "Hello. I am sample text! How are you?";
-const regex = /[A-Z].{0-9}?(\.|\?|!)/g;
+const text = "Ho-uda9.@GMAIL.COMom";
+const regex = /^[a-zA-Z0-9.-]+@[A-Z]+\.[a-zA-Z]+$/;
 
-console.log(text.match(regex));
+console.log(regex.test(text));
