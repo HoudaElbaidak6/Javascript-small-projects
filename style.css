@@ -1,35 +1,23 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+.is_invalid{
+    all: unset;
+    outline: 2px solid red !important;
+  }
+  
+  .is_valid{
+    all: unset;
+    outline: 2px solid green !important;
+  }
+  
+  .invalid_message{
+    color: red;
+  }
 
-#btn {
-    padding: 10px 20px;
-    background-color: cornflowerblue;
-    color: crimson;
-    font-size: 1.3em;
-    font-weight: 400;
-    border-radius: 10px;
-    border: 5px solid crimson;
-    
-}
+  .emailValid{
+    all: unset;
+    outline: 2px solid green !important;
+  }
 
-#hexbtn{
-    background-color: grey;
-    color: black;
-    border: solid 5px black;
-    border-radius: 10px;
-    font-size: 1.3em;
-    font-weight: 700;
-    padding: 10px 20px;
-}
-
-label {
-    font-size: 1.6em;
-    font-weight: 600;
-    color: rgb(212, 153, 81);
-    margin-right: 20px;
-}
+  .emailNotvalid{
+    all: unset;
+    outline: 2px solid red !important;
+  }

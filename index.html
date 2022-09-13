@@ -8,25 +8,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--  <p id="outputext">Hello</p>
-    <input type="text" id="input" />
-    <button type="button" id="btn">Greetings!</button>  -->
+    <form action="">
+      <p>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" value=""  />
+      <div class="invalid_message">
+      </div>
+      </p>
+      <p>
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          value="test@gmail.com"
+          required
+        />
+        <div id="emailInvalid"></div>
+      </p>
+      <input type="submit" value="Envoyer" />
+    </form>
 
-    <!-- <button id="btn">Click Me !</button> -->
-    <!-- <label for="color">Choose a color</label> -->
-    <!-- <input type="color" id="colorInput" />  -->
-<!-- 
-     <h1 id="hexcolor">Hex color :</h1>
-
-    <button id="hexbtn" type="button">Click me</button>  -->
-
-    <!--  <h1>Color gradiant generator</h1>
-    <input class="color1" type="color" />
-    <input class="color2" type="color" />
-    <h3 id="output"></h3> -->
-
-
-    
     <script src="script.js"></script>
   </body>
 </html>
