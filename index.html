@@ -8,12 +8,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Guess My number !!</h1>
-    <h3>I'm thinking of a number btw 1 and 10</h3>
-    <input type="text" placeholder="Enter Your Guess" />
-    <button>Submit your answer</button>
-    <p id="results"></p>
-    <p id="numberReveal"></p>
+    <div id="game-area">
+      <h1>Guess My number !!</h1>
+      <h3>I'm thinking of a number btw 1 and 10</h3>
+      <input type="text" placeholder="Enter Your Guess" />
+      <button>Submit your answer</button>
+    </div>
+
+    <div id="result-area">
+      <p id="results"></p>
+    </div>
+    <div id="restart-area">
+      <h1>Wanna play again</h1>
+      <button id="btn">Restart Game</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
