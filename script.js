@@ -28,4 +28,20 @@ form.addEventListener("submit", function (e) {
     inputs["email"].className = "emailNotvalid";
     validemailmsg.textContent = `${inputs["email"].value} is not valid !!`;
   }
+
+  let validPassword = /^[a-zA-Z0-9.*_-]{6,12}$/;
+  if (inputs["pass"].value.match(validPassword)) {
+    inputs["pass"].className = "is_valid";
+    if (document.querySelector("#password+.invalid_message")) {
+      document.querySelector("#password+.invalid_message").remove();
+    }
+  } else {
+    inputs["pass"].className = "is_invalid";
+    if (!document.querySelector("#password+.invalid_message")) {
+      let divpass = document.createElement("div");
+      divpass.className = "invalid_message";
+      divpass.textContent = "The password is invalid";
+      document.getElementById("password").after(divpass);
+    }
+  }
 });
