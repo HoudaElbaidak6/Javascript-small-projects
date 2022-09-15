@@ -59,7 +59,7 @@ prom
     console.log(res);
   }); */
 
-let promesse = new Promise(function (resolve, reject) {
+/* let promesse = new Promise(function (resolve, reject) {
   let phrase = " I hate Bissara ";
   if (phrase.length > 5) {
     let regex = /(\w+) (\w+) (\w+)/;
@@ -76,3 +76,23 @@ promesse
   .catch(function (error) {
     console.log(error);
   });
+ */
+
+function RemplirTab(n) {
+  let tab = [];
+
+  let promesse = new Promise(function (resolve) {
+    for (let i = 0; i < n + 1; i++) {
+      tab[i] = i + 1;
+    }
+    resolve(tab);
+  });
+  return promesse;
+}
+let prom = RemplirTab(4);
+prom.then((rem) => {
+  console.log(rem);
+});
+
+
+
