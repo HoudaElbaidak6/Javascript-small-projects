@@ -78,7 +78,7 @@ promesse
   });
  */
 
-function RemplirTab(n) {
+/* function RemplirTab(n) {
   let tab = [];
 
   let promesse = new Promise(function (resolve) {
@@ -93,6 +93,76 @@ let prom = RemplirTab(4);
 prom.then((rem) => {
   console.log(rem);
 });
+ */
 
+/* function NombreEntier(nbre) {
+  return new Promise(function (resolve, reject) {
+    if (nbre % 2 == 0) {
+      let res = nbre * nbre;
+      resolve(res);
+    } else {
+      reject("Erreur:Nombre Impaire");
+    }
+  });
+}
+
+let idk = NombreEntier(4);
+idk
+  .then(function (resultat) {
+    console.log(resultat);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+ */
+
+/* function SommeTab(n) {
+  let tab = [4, 3, 4, 6, 9, 9];
+  let somme = 0;
+  return new Promise(function (resolve, reject) {
+    if (n <= tab.length && n > 0) {
+      for (let i = 0; i < n; i++) {
+        somme = somme + tab[i];
+      }
+      resolve(somme);
+    } else {
+      reject("Index of Array out of bounds");
+    }
+  });
+}
+
+let tabSomme = SommeTab(-1);
+tabSomme
+  .then(function (resultat) {
+    console.log(resultat);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+ */
+
+/* let promesse = new Promise(function (resolve, reject) {
+  let phrase = "I hate myself";
+  if (phrase.length > 5) {
+    let regex = /(\w+) (\w+) (\w+)/;
+    // console.log(text.replace(regex, "$3 $2 $1"));
+    resolve(phrase.replace(regex, "$3 $2 $1"));
+  } else {
+    reject("Phrase incorrect");
+  }
+});
+
+promesse
+  .then(function (resulat) {
+    console.log(resulat);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+ */
+
+
+  
 
 
